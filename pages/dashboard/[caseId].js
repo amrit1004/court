@@ -7,7 +7,6 @@ import { getSession } from 'next-auth/client';
 import toast from 'react-hot-toast';
 
 function CaseDetailsPage(props) {
-  const parsedFees = JSON.parse(props.fees);
   const parsedData = JSON.parse(props.caseDetail);
 
   const router = useRouter();
@@ -41,7 +40,6 @@ function CaseDetailsPage(props) {
       <DisplayCaseDetails
         caseDetail={parsedData}
         delete={deleteHandler}
-        fees={parsedFees.fees}
       />
     </>
   );
@@ -86,7 +84,6 @@ export async function getServerSideProps(context) {
   return {
     props: {
       caseDetail: stringifiedData,
-      fees: stringifyFee,
     },
   };
 }

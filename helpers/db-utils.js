@@ -8,7 +8,7 @@ import { MongoClient, ObjectID } from 'mongodb';
 // const MONGODB_URI = `mongodb+srv://${username}:${password}@${cluster}.3svps.mongodb.net/${database}?retryWrites=true&w=majority`;
 
 const MONGODB_URI =
-  'mongodb+srv://Judiciary:iglAHqSvAgRfBqFR@cluster0.a6qwp.mongodb.net/MyFirstDatabase?retryWrites=true&w=majority';
+  'mongodb+srv://amritsinghal2211:nyvd63nidJhNahge@cluster0.dpeyq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 export async function connectToDatabase() {
   const client = await MongoClient.connect(MONGODB_URI, {
@@ -23,7 +23,7 @@ export async function getAllLawyerProfiles(client) {
   const db = client.db();
 
   const documents = await db.collection('lawyersList').find().toArray();
-  // console.log(documents);
+   console.log(documents);
 
   return documents;
 }

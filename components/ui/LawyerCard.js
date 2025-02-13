@@ -1,37 +1,30 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-function LawyerCard(props) {
-  const { bcid, name, prefCase, fees, yrs } = props;
-
+function LawyerCard({ bcid, name, prefCase, fees, yrs }) {
   return (
-    <tr className="bg-gray-300 border border-grey-500 md:border-none block md:table-row">
-      <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-        <span className="inline-block w-1/3 md:hidden font-bold">
-          Lawyer Name
-        </span>
+    <tr className="block bg-gray-300 border border-grey-500 md:border-none md:table-row">
+      <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
+        <span className="inline-block w-1/3 font-bold md:hidden">Lawyer Name</span>
         {name}
       </td>
-      <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-        <span className="inline-block w-1/3 md:hidden font-bold">
-          Preferred Case Types
-        </span>
-        {prefCase}
+      <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
+        <span className="inline-block w-1/3 font-bold md:hidden">Preferred Case Types</span>
+        {prefCase.join(", ")}
       </td>
-      <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-        <span className="inline-block w-1/3 md:hidden font-bold">Fees(Rs)</span>
+      <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
+        <span className="inline-block w-1/3 font-bold md:hidden">Fees (Rs)</span>
         {fees}
       </td>
-      <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-        <span className="inline-block w-1/3 md:hidden font-bold">
-          Years of Experience
-        </span>
+      <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
+        <span className="inline-block w-1/3 font-bold md:hidden">Years of Experience</span>
         {yrs}
       </td>
-      <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-        <Link href={`/lawyers/${bcid}`}>
-          <a className="py-2 px-3 bg-blue-700 hover:bg-blue-500 text-white hover:text-black rounded transition duration-300">
-            View
-          </a>
+      <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
+        <Link
+          href={`/lawyer/${bcid}`}
+          className="px-3 py-2 text-white transition duration-300 bg-blue-700 rounded hover:bg-blue-500 hover:text-black"
+        >
+          View
         </Link>
       </td>
     </tr>
