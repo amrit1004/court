@@ -257,7 +257,7 @@ function HomePage() {
               <li className="p-2 cursor-pointer hover:underline">Cookies</li>
             </ul>
             <div className="flex mx-auto text-white text-center">
-              Copyright Adaalat © 2021
+              Copyright Adaalat © 2024
             </div>
           </div>
         </footer>
