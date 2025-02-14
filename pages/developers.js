@@ -1,17 +1,8 @@
-import Image from 'next/image';
-import Head from 'next/head';
-import Link from 'next/link';
+import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
 
 function MeetTheDevelopersPage() {
-  const saifUrl =
-    'https://media-exp1.licdn.com/dms/image/C5603AQEwfThqCOxOzg/profile-displayphoto-shrink_100_100/0/1630575342297?e=1641427200&v=beta&t=jdSJRxSf4pMwQcLZRVeZ5iHhmqVqcFJ9PB-G78TKU_U';
-
-  const geoUrl =
-    'https://media-exp1.licdn.com/dms/image/C5603AQG-dy6nIY8CLg/profile-displayphoto-shrink_400_400/0/1635856807943?e=1641427200&v=beta&t=Ws4j2GN0ZpcJ_e-X2us7tLEevDCX_eu242LbhF2c9qA';
-
-  const amishaUrl =
-    'https://scontent-bom1-2.cdninstagram.com/v/t51.2885-19/s320x320/136993775_487356958917140_1809878205885646764_n.jpg?_nc_ht=scontent-bom1-2.cdninstagram.com&_nc_cat=108&_nc_ohc=iF_O2SXeijgAX_G-2SP&edm=ABfd0MgBAAAA&ccb=7-4&oh=7e9dc9ec56223e01cbdc5c873be05e2d&oe=61A23229&_nc_sid=7bff83';
-
   return (
     <section className="text-gray-600 body-font">
       <Head>
@@ -51,11 +42,79 @@ function MeetTheDevelopersPage() {
       </Head>
       <div className="container px-5 py-24 mx-auto">
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+          <div className="sm:w-44 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
             {/* Image */}
             <Image
-              src={geoUrl}
+              src="/anuj.jpg"
               className="rounded-full"
+              layout="intrinsic"
+              width="200"
+              height="200"
+              alt="Anuj"
+            />
+          </div>
+          <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0 flex-col">
+            <h2 className="text-gray-900 text-2xl title-font font-medium mb-2">
+              Anuj Chaudhary
+            </h2>
+            <p className="leading-relaxed text-base">
+              "Passionate Full Stack Developer with expertise in building and
+              testing APIs, developing dynamic front-end components, and
+              crafting seamless user experiences.
+            </p>
+            <div className=" flex flex-row gap-2 mt-1">
+              <Link href="https://github.com/Anuj054">
+                <a target="_blank">
+                  <img src="/github.png" className="  h-[30px] w-[30px]" />
+                </a>
+              </Link>{" "}
+              <Link href="https://www.linkedin.com/in/anuj-chaudhary-5b5629255/">
+                <a target="_blank">
+                  <img src="/linkedin.png" className=" h-[30px] w-[30px]" />
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 className="text-gray-900 text-2xl title-font font-medium mb-2">
+              Amrit Singhal
+            </h2>
+            <p className="leading-relaxed text-base">
+              "Versatile Full Stack Developer focused on building scalable APIs
+              and intuitive front-end interfaces using JavaScript."
+            </p>
+            <div className=" flex flex-row gap-2 mt-1">
+              <Link href="https://github.com/amrit1004">
+                <a target="_blank">
+                  <img src="/github.png" className="  h-[30px] w-[30px]" />
+                </a>
+              </Link>{" "}
+              <Link href="https://www.linkedin.com/in/amrit-singhal-63b75a256/">
+                <a target="_blank">
+                  <img src="/linkedin.png" className=" h-[30px] w-[30px]" />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="sm:w-44 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+            <Image
+              src="/amrit.jpg"
+              className="rounded-full"
+              layout="intrinsic"
+              width="200"
+              height="200"
+              alt="Amrit"
+            />
+          </div>
+        </div>
+        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div className="sm:w-44 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+            {/* Image */}
+            <Image
+              src="/ankush.jpg"
+              className="rounded-full "
               layout="intrinsic"
               width="200"
               height="200"
@@ -63,110 +122,60 @@ function MeetTheDevelopersPage() {
             />
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-              Georgey V B
+            <h2 className="text-gray-900 text-2xl title-font font-medium mb-2">
+              Ankush Rawat
             </h2>
             <p className="leading-relaxed text-base">
-              Full-Stack and JamStack developer.
+              Dedicated Full Stack Developer delivering efficient, user-centric
+              web applications with expertise in JavaScript and API
+              integration."
             </p>
-            <Link href="https://www.linkedin.com/in/georgeyvb/">
-              <a
-                target="_blank"
-                className="mt-3 text-pink-500 inline-flex items-center"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </Link>
+            <div className=" flex flex-row gap-2 mt-1">
+              <Link href="https://github.com/Anuj054">
+                <a target="_blank">
+                  <img src="/github.png" className="  h-[30px] w-[30px]" />
+                </a>
+              </Link>{" "}
+              <Link href="https://www.linkedin.com/in/ankush-rawat-b29957256/">
+                <a target="_blank">
+                  <img src="/linkedin.png" className=" h-[30px] w-[30px]" />
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
+
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-              Amisha Naik
+            <h2 className="text-gray-900 text-2xl title-font font-medium mb-2">
+              Aditya Raina
             </h2>
             <p className="leading-relaxed text-base">
               An aspiring software developer. Currently pursuing bachelor degree
               in Computer engineering.
             </p>
-            <Link href="https://www.linkedin.com/in/amisha-naik-b2a633191">
-              <a
-                target="_blank"
-                className="mt-3 text-pink-500 inline-flex items-center"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </Link>
+            <div className=" flex flex-row gap-2 mt-1">
+              <Link href="https://github.com/Anuj054">
+                <a target="_blank">
+                  <img src="/github.png" className="  h-[30px] w-[30px]" />
+                </a>
+              </Link>{" "}
+              <Link href="https://www.linkedin.com/in/anuj-chaudhary-5b5629255/">
+                <a target="_blank">
+                  <img src="/linkedin.png" className=" h-[30px] w-[30px]" />
+                </a>
+              </Link>
+            </div>
           </div>
-          <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
+          <div className="sm:w-44 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
             <Image
-              src={amishaUrl}
+              src="/raina.jpeg"
               className="rounded-full"
               layout="intrinsic"
               width="200"
               height="200"
-              alt="Image"
+              alt="Aditya"
             />
-          </div>
-        </div>
-        <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-pink-100 text-pink-500 flex-shrink-0">
-            <Image
-              src={saifUrl}
-              className="rounded-full"
-              layout="intrinsic"
-              width="200"
-              height="200"
-              alt="Image"
-            />
-          </div>
-          <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-              Saif Farooqui
-            </h2>
-            <p className="leading-relaxed text-base">
-              Computer Science student and aspiring software developer.
-            </p>
-            <Link href="https://www.linkedin.com/in/saif-farooqui">
-              <a
-                target="_blank"
-                className="mt-3 text-pink-500 inline-flex items-center"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </Link>
           </div>
         </div>
       </div>
