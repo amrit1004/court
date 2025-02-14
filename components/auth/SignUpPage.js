@@ -1,10 +1,8 @@
-import { signin } from 'next-auth/client';
 import { useRef, useState } from 'react';
-
+import { useRouter } from 'next/router'; // Import useRouter
 import toast from 'react-hot-toast';
 
 async function createUser(email, password, firstName, lastName) {
-  // fetch request
   const response = await fetch('/api/auth/signup', {
     method: 'POST',
     body: JSON.stringify({ email, password, firstName, lastName }),
@@ -12,16 +10,16 @@ async function createUser(email, password, firstName, lastName) {
   });
 
   const data = await response.json();
-
   if (!response.ok) {
-    throw new Error(response.message || 'Something went wrong');
+    throw new Error(data.message || 'Something went wrong');
   }
 
   return data;
 }
 
-function SignUpPage(props) {
+function SignUpPage() {
   const [isInvalid, setIsInvalid] = useState(false);
+  const router = useRouter(); // Initialize router
 
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
@@ -39,14 +37,13 @@ function SignUpPage(props) {
 
     if (
       !enteredEmail ||
-      enteredEmail.trim() === '' ||
       !enteredEmail.includes('@') ||
       !enteredFirstName ||
-      enteredFirstName.trim() === '' ||
-      !enteredLastName ||
-      enteredLastName.trim() === ''
+      !enteredLastName
     ) {
       setIsInvalid(true);
+      toast.dismiss(toastId);
+      toast.error('Please enter valid information!');
       return;
     }
 
@@ -58,12 +55,18 @@ function SignUpPage(props) {
         enteredLastName
       );
       console.log(response);
+
       toast.dismiss(toastId);
       toast.success("You're in 🤘🏼");
+
+      // Navigate to the home page after successful signup
     } catch (error) {
-      console.log(error);
+      toast.dismiss(toastId);
+      toast.error(error.message || 'Signup failed');
+      console.error(error);
     }
 
+    // Reset input fields
     emailInputRef.current.value = '';
     fnameInputRef.current.value = '';
     lnameInputRef.current.value = '';
@@ -80,9 +83,7 @@ function SignUpPage(props) {
                 <h4 className="w-full text-3xl font-bold">Signup</h4>
                 <div className="relative w-full mt-10 space-y-8">
                   <div className="relative">
-                    <label className="font-medium text-gray-900">
-                      First Name
-                    </label>
+                    <label className="font-medium text-gray-900">First Name</label>
                     <input
                       ref={fnameInputRef}
                       type="text"
@@ -91,9 +92,7 @@ function SignUpPage(props) {
                     />
                   </div>
                   <div className="relative">
-                    <label className="font-medium text-gray-900">
-                      Last Name
-                    </label>
+                    <label className="font-medium text-gray-900">Last Name</label>
                     <input
                       ref={lnameInputRef}
                       type="text"
@@ -111,9 +110,7 @@ function SignUpPage(props) {
                     />
                   </div>
                   <div className="relative">
-                    <label className="font-medium text-gray-900">
-                      Password
-                    </label>
+                    <label className="font-medium text-gray-900">Password</label>
                     <input
                       ref={passwordInputRef}
                       type="password"
@@ -121,7 +118,6 @@ function SignUpPage(props) {
                       placeholder="Password"
                     />
                   </div>
-
                   <div className="relative">
                     <button
                       type="submit"
@@ -137,16 +133,7 @@ function SignUpPage(props) {
         </div>
       </form>
 
-      {isInvalid && <p>Please enter valid information!</p>}
-
-      {/* Google Provider */}
-      <button
-        onClick={signin}
-        href="#_"
-        className="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease"
-      >
-        Sign up with Google
-      </button>
+      {isInvalid && <p className="text-center text-red-500">Please enter valid information!</p>}
     </section>
   );
 }
