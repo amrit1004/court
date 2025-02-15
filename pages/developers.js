@@ -131,7 +131,7 @@ function MeetTheDevelopersPage() {
               integration."
             </p>
             <div className=" flex flex-row gap-2 mt-1">
-              <Link href="https://github.com/Anuj054">
+              <Link href="https://github.com/AnkushRawat27">
                 <a target="_blank">
                   <img src="/github.png" className="  h-[30px] w-[30px]" />
                 </a>
@@ -155,12 +155,12 @@ function MeetTheDevelopersPage() {
               in Computer engineering.
             </p>
             <div className=" flex flex-row gap-2 mt-1">
-              <Link href="https://github.com/Anuj054">
+              <Link href="https://github.com/adityaraina204">
                 <a target="_blank">
                   <img src="/github.png" className="  h-[30px] w-[30px]" />
                 </a>
               </Link>{" "}
-              <Link href="https://www.linkedin.com/in/anuj-chaudhary-5b5629255/">
+              <Link href="https://www.linkedin.com/in/aditya-raina-65aa66257/">
                 <a target="_blank">
                   <img src="/linkedin.png" className=" h-[30px] w-[30px]" />
                 </a>

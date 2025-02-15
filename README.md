@@ -1,4 +1,3 @@
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 # Adaalat: A court management system
 
@@ -11,13 +10,6 @@ In short the system should provide end to end management of court cases from a
 client perspective and should be easy to use.
 
 ---
-
-## Authors
-
-- [@geobrodas](https://www.github.com/GeoBrodas)
-- [@saiffarooqui](https://github.com/saiffarooqui)
-- [@AmishaNaik18](https://github.com/AmishaNaik18)
-
 ## Tech Stack
 
 - NextJS
