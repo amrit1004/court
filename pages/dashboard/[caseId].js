@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 
 function CaseDetailsPage(props) {
   const parsedData = JSON.parse(props.caseDetail);
-
+  const parsedFees = JSON.parse(props.fees);
   const router = useRouter();
 
   // delete case
@@ -40,6 +40,7 @@ function CaseDetailsPage(props) {
       <DisplayCaseDetails
         caseDetail={parsedData}
         delete={deleteHandler}
+        fees={parsedFees.fees}
       />
     </>
   );
@@ -84,6 +85,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       caseDetail: stringifiedData,
+      fees: stringifyFee,
     },
   };
 }

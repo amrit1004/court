@@ -21,7 +21,7 @@ function LawyerCard({ bcid, name, prefCase, fees, yrs }) {
       </td>
       <td className="block p-2 text-left md:border md:border-grey-500 md:table-cell">
         <Link
-          href={`/lawyer/${bcid}`}
+          href={`/lawyers/${bcid}`}
           className="px-3 py-2 text-white transition duration-300 bg-blue-700 rounded hover:bg-blue-500 hover:text-black"
         >
           View
