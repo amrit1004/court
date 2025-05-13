@@ -1,4 +1,4 @@
-import SignUp from '@/components/auth/SignUp';
+import SignUp from '../components/auth/SignUp';
 import { getSession } from 'next-auth/client';
 
 import Head from 'next/head';

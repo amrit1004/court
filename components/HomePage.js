@@ -6,26 +6,26 @@ import Link from 'next/link';
 function HomePage() {
   return (
     <Fragment>
-      <section className="px-2 py-20 bg-white md:px-0">
+      <section className="px-2 py-20 bg-white dark:bg-gray-900 transition-colors duration-200 md:px-0">
         <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
           <div className="flex flex-wrap items-center sm:-mx-3">
             <div className="w-full md:w-1/2 md:px-3">
               <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
                   <span className="block xl:inline">
                     Court Case Management System:
                   </span>
-                  <span className="block text-indigo-700 xl:inline">
+                  <span className="block text-indigo-700 dark:text-indigo-400 xl:inline">
                     {' '}
                     Adaalat
                   </span>
                 </h1>
-                <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
+                <p className="mx-auto text-base text-gray-500 dark:text-gray-300 sm:max-w-md lg:text-xl md:max-w-3xl">
                   A platform to add and manage cases.
                 </p>
                 <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                   <Link href="/auth">
-                    <a className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-700 sm:mb-0 hover:bg-indigo-800 sm:w-auto rounded-2xl">
+                    <a className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-700 dark:bg-indigo-600 sm:mb-0 hover:bg-indigo-800 dark:hover:bg-indigo-700 sm:w-auto rounded-2xl">
                       Get Started Now
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ function HomePage() {
                     </a>
                   </Link>
                   <Link href="/developers">
-                    <a className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-700 sm:mb-0 hover:bg-indigo-800 sm:w-auto rounded-2xl">
+                    <a className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-700 dark:bg-indigo-600 sm:mb-0 hover:bg-indigo-800 dark:hover:bg-indigo-700 sm:w-auto rounded-2xl">
                       Meet the developers!
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -78,17 +78,17 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900 transition-colors duration-200">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold tracking-tight text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-center dark:text-white">
             Our Features
           </h2>
-          <p className="mt-2 text-lg text-center text-gray-600">
+          <p className="mt-2 text-lg text-center text-gray-600 dark:text-gray-300">
             Check out our list of awesome features below.
           </p>
           <div className="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
-            <div className="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -106,15 +106,15 @@ function HomePage() {
                   <path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5"></path>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">Performance</h4>
-              <p className="text-base text-center text-gray-500">
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">Performance</h4>
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
                 The system shall allow several case registration at the same
                 time without downgrading performance.
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -131,17 +131,17 @@ function HomePage() {
                   <path d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"></path>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">
                 Availability
               </h4>
-              <p className="text-base text-center text-gray-500">
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
                 The system shall be available to all court and can be access
                 anywhere.
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -160,15 +160,15 @@ function HomePage() {
                   <line x1="16" y1="5.25" x2="8" y2="9.75"></line>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">Usability</h4>
-              <p className="text-base text-center text-gray-500">
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">Usability</h4>
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
                 The system shall be easy to learn and use by all users including
                 registrar and administrator.
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -185,15 +185,15 @@ function HomePage() {
                   <rect x="3" y="4" width="18" height="16" rx="2"></rect>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">Security</h4>
-              <p className="text-base text-center text-gray-500">
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">Security</h4>
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
                 Each user is required to login. The system shall allow people
-                with assigned user names and passwords.
+                with assigned user names and passwords.
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -211,15 +211,15 @@ function HomePage() {
                   <path d="M7 5h1v-2h8v2h1a3 3 0 0 1 3 3v9a3 3 0 0 1 -3 3v1h-10v-1a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3"></path>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">Reliability</h4>
-              <p className="text-base text-center text-gray-500">
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">Reliability</h4>
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
                 The system have low system failure occurrence and low risk. And
                 will not take much time to resolve it.
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-              <div className="p-3 text-white bg-blue-500 rounded-full">
+            <div className="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 dark:bg-gray-800 sm:rounded-xl">
+              <div className="p-3 text-white bg-blue-500 dark:bg-blue-600 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-8 h-8 "
@@ -237,16 +237,16 @@ function HomePage() {
                   <path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"></path>
                 </svg>
               </div>
-              <h4 className="text-xl font-medium text-gray-700">Accuracy</h4>
-              <p className="text-base text-center text-gray-500">
-                 The system shall work accurately without high failure or error.
+              <h4 className="text-xl font-medium text-gray-700 dark:text-white">Accuracy</h4>
+              <p className="text-base text-center text-gray-500 dark:text-gray-300">
+                 The system shall work accurately without high failure or error.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="bg-gray-900">
+      <div className="bg-gray-900 dark:bg-gray-800 transition-colors duration-200">
         <footer className="flex flex-wrap items-center justify-between p-3 m-auto">
           <div className="container mx-auto flex flex-col flex-wrap items-center justify-between">
             <ul className="flex mx-auto text-white text-center">

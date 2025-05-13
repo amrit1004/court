@@ -1,5 +1,6 @@
 import Feed from '@/components/Feed';
 import FeedHeader from '@/components/FeedHeader';
+import CaseSearch from '@/components/ui/CaseSearch';
 import { connectToDatabase } from '@/helpers/db-utils';
 import { getSession, signOut, useSession } from 'next-auth/client';
 
@@ -19,8 +20,14 @@ function Dashboard(props) {
           content="Adaalat: One step Solution to managing court hearings"
         />
       </Head>
+      {/* Advanced Case Search */}
+      <div className="mb-8">
+        <CaseSearch />
+      </div>
+      
       {/* Section for add clients */}
       <FeedHeader />
+      
       {/* Table of clients */}
       <Feed cases={parsedData} />
     </div>
