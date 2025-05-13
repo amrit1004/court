@@ -68,6 +68,7 @@ Start the server
   npm run dev
 ```
 
+<<<<<<< HEAD
 ## New Features Details
 
 ### 1. Case Status Tracking
@@ -101,13 +102,6 @@ http://localhost:3000/api/setup-db
 This will create necessary collections and indexes for the new features.
 
 ## Feedback
+=======
+>>>>>>> 0a0bb4e28ff8fe625b0f8ee94b2cdbda1986672b
 
-If you have any feedback, please reach out to us at
-
-- https://georgey.codes
-- geobro2310@gmail.com
-
-## 🔗 Links
-
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://georgey.codes/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/georgeyvb/)
