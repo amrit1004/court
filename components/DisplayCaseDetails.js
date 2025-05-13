@@ -54,8 +54,8 @@ function DisplayCaseDetails(props) {
 
   return (
     <Fragment>
-      <div className="min-h-screen px-10 py-32 bg-white">
-        <div ref={detailsRef} className="p-10 mx-auto bg-gray-100 md:w-3/4 lg:w-1/2">
+      <div className="min-h-screen px-10 py-32 transition-colors duration-200 bg-white dark:bg-gray-900">
+        <div ref={detailsRef} className="p-10 mx-auto transition-colors duration-200 bg-gray-100 md:w-3/4 lg:w-1/2 dark:bg-gray-900">
           <div className="flex items-center mb-5">
             <label className="items-center mr-6 text-2xl font-black text-right text-gray-600">
               CASE DETAILS

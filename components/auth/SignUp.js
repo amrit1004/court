@@ -23,7 +23,7 @@ function SignUp() {
           <button
             type="button"
             onClick={switchAuthModeHandler}
-            className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease"
+            className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 dark:bg-blue-700 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 ease"
           >
             {isLogin ? 'Create a new account' : 'Login with existing account'}
           </button>
