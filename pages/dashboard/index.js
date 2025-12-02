@@ -1,9 +1,10 @@
+
 import Feed from '@/components/Feed';
 import FeedHeader from '@/components/FeedHeader';
 import CaseSearch from '@/components/ui/CaseSearch';
+
 import { connectToDatabase } from '@/helpers/db-utils';
 import { getSession, signOut, useSession } from 'next-auth/client';
-
 import Head from 'next/head';
 
 function Dashboard(props) {
@@ -24,10 +25,12 @@ function Dashboard(props) {
       <div className="mb-8">
         <CaseSearch />
       </div>
-      
+
+
+
       {/* Section for add clients */}
       <FeedHeader />
-      
+
       {/* Table of clients */}
       <Feed cases={parsedData} />
     </div>

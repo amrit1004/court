@@ -9,6 +9,9 @@ import NextNProgress from 'nextjs-progressbar';
 import { ThemeProvider } from '../context/ThemeContext';
 
 function MyApp({ Component, pageProps }) {
+  // Pass cases to Layout if available (for dashboard and global calendar)
+  const layoutProps = {};
+  if (pageProps.cases) layoutProps.cases = pageProps.cases;
   return (
     <Provider session={pageProps.session}>
       <ThemeProvider>
@@ -21,7 +24,7 @@ function MyApp({ Component, pageProps }) {
           options={{ showSpinner: false }}
         />
         <Toaster />
-        <Layout>
+        <Layout {...layoutProps}>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>

@@ -12,6 +12,9 @@
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
     "@babel/preset-react": "^7.26.3",
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/interaction": "^6.1.19",
+    "@fullcalendar/react": "^6.1.19",
     "bcryptjs": "^2.4.3",
     "formidable": "^3.5.1",
     "jspdf": "^3.0.1",
@@ -24,6 +27,7 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.18.0",
     "react-hot-toast": "^2.1.1",
+    "react-modal": "^3.16.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
