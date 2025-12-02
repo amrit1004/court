@@ -52,7 +52,6 @@ class MyDocument extends Document {
           />
           <Main />
           <NextScript />
-          <script src="/js/script.js"></script>
         </body>
       </Html>
     );
