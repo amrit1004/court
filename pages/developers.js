@@ -58,19 +58,19 @@ function MeetTheDevelopersPage() {
               Anuj Chaudhary
             </h2>
             <p className="leading-relaxed text-base dark:text-gray-300">
-              "Passionate Full Stack Developer with expertise in building and
-              testing APIs, developing dynamic front-end components, and
-              crafting seamless user experiences.
+                &quot;Passionate Full Stack Developer with expertise in building and
+                testing APIs, developing dynamic front-end components, and
+                crafting seamless user experiences.&quot;
             </p>
             <div className="flex flex-row gap-2 mt-1">
               <Link href="https://github.com/Anuj054">
                 <a target="_blank">
-                  <img src="/github.png" className="h-[30px] w-[30px]" />
+                    <Image src="/github.png" alt="GitHub" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>{" "}
               <Link href="https://www.linkedin.com/in/anuj-chaudhary-5b5629255/">
                 <a target="_blank">
-                  <img src="/linkedin.png" className="h-[30px] w-[30px]" />
+                    <Image src="/linkedin.png" alt="LinkedIn" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>
             </div>
@@ -82,18 +82,18 @@ function MeetTheDevelopersPage() {
               Amrit Singhal
             </h2>
             <p className="leading-relaxed text-base dark:text-gray-300">
-              "Versatile Full Stack Developer focused on building scalable APIs
-              and intuitive front-end interfaces using JavaScript."
+                &quot;Versatile Full Stack Developer focused on building scalable APIs
+                and intuitive front-end interfaces using JavaScript.&quot;
             </p>
             <div className="flex flex-row gap-2 mt-1">
               <Link href="https://github.com/amrit1004">
                 <a target="_blank">
-                  <img src="/github.png" className="h-[30px] w-[30px]" />
+                    <Image src="/github.png" alt="GitHub" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>{" "}
               <Link href="https://www.linkedin.com/in/amrit-singhal-63b75a256/">
                 <a target="_blank">
-                  <img src="/linkedin.png" className="h-[30px] w-[30px]" />
+                    <Image src="/linkedin.png" alt="LinkedIn" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>
             </div>
@@ -126,19 +126,19 @@ function MeetTheDevelopersPage() {
               Ankush Rawat
             </h2>
             <p className="leading-relaxed text-base dark:text-gray-300">
-              Dedicated Full Stack Developer delivering efficient, user-centric
-              web applications with expertise in JavaScript and API
-              integration."
+                Dedicated Full Stack Developer delivering efficient, user-centric
+                web applications with expertise in JavaScript and API
+                integration.&quot;
             </p>
             <div className="flex flex-row gap-2 mt-1">
               <Link href="https://github.com/AnkushRawat27">
                 <a target="_blank">
-                  <img src="/github.png" className="h-[30px] w-[30px]" />
+                    <Image src="/github.png" alt="GitHub" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>{" "}
               <Link href="https://www.linkedin.com/in/ankush-rawat-b29957256/">
                 <a target="_blank">
-                  <img src="/linkedin.png" className="h-[30px] w-[30px]" />
+                    <Image src="/linkedin.png" alt="LinkedIn" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>
             </div>
@@ -151,18 +151,18 @@ function MeetTheDevelopersPage() {
               Aditya Raina
             </h2>
             <p className="leading-relaxed text-base dark:text-gray-300">
-              An aspiring software developer. Currently pursuing bachelor degree
-              in Computer engineering.
+                An aspiring software developer. Currently pursuing bachelor degree
+                in Computer engineering.
             </p>
             <div className="flex flex-row gap-2 mt-1">
               <Link href="https://github.com/adityaraina204">
                 <a target="_blank">
-                  <img src="/github.png" className="h-[30px] w-[30px]" />
+                    <Image src="/github.png" alt="GitHub" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>{" "}
               <Link href="https://www.linkedin.com/in/aditya-raina-65aa66257/">
                 <a target="_blank">
-                  <img src="/linkedin.png" className="h-[30px] w-[30px]" />
+                    <Image src="/linkedin.png" alt="LinkedIn" width={30} height={30} className="h-[30px] w-[30px]" />
                 </a>
               </Link>
             </div>

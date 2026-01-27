@@ -1,10 +1,15 @@
 import { signOut, useSession } from 'next-auth/client';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import DarkModeToggle from '../ui/DarkModeToggle';
+import Modal from 'react-modal';
+import UserCalendar from '../UserCalendar';
 
 function Layout(props) {
   const [session] = useSession();
+  const [calendarOpen, setCalendarOpen] = useState(false);
+  // Try to get cases from props if passed, else empty array
+  const userCases = props.cases ? JSON.parse(props.cases) : [];
   return (
     <Fragment>
       <nav className="bg-gray-100 dark:bg-gray-800 transition-colors duration-200">
@@ -48,6 +53,23 @@ function Layout(props) {
             {/* dark mode toggle and buttons */}
             <div className="flex items-center space-x-3">
               <DarkModeToggle />
+
+              {/* Calendar Button */}
+              {session && (
+                <button
+                  className="py-2 px-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded transition duration-300 shadow"
+                  onClick={() => setCalendarOpen(true)}
+                  title="Show Calendar"
+                >
+                  <svg className="inline w-5 h-5 mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" fill="currentColor" className="text-indigo-500 opacity-10" />
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                  </svg>
+                  Calendar
+                </button>
+              )}
 
               {session && (
                 <div
@@ -117,6 +139,35 @@ function Layout(props) {
         )}
       </nav>
       <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+        {/* Calendar Modal (global, accessible from navbar) */}
+        <Modal
+          isOpen={calendarOpen}
+          onRequestClose={() => setCalendarOpen(false)}
+          contentLabel="User Calendar"
+          ariaHideApp={false}
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(30, 41, 59, 0.55)',
+              zIndex: 1000,
+            },
+            content: {
+              maxWidth: '700px',
+              margin: 'auto',
+              borderRadius: '1rem',
+              padding: '2rem',
+              background: 'rgba(255,255,255,0.97)',
+              boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+              border: 'none',
+              color: '#1e293b',
+            },
+          }}
+        >
+          <div className="flex justify-between items-center mb-2">
+            <h2 className="text-xl font-bold text-indigo-700">Your Case Calendar</h2>
+            <button onClick={() => setCalendarOpen(false)} className="text-gray-500 hover:text-gray-900 text-2xl font-bold">&times;</button>
+          </div>
+          <UserCalendar cases={userCases} />
+        </Modal>
         {props.children}
       </main>
     </Fragment>
